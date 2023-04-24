@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch a Sketch</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="title"><h1>Etch a Sketch</h1></div>
+        <div class="mode">Mode: Active</div>
+        <div class="content">
+            <div class="buttons">
+                <button onclick="changeColor('black')" class = "black-button">Black</button>
+                <button onclick="changeColor('grey')" class = "grey-button">Grey</button>
+                <button onclick="changeColor('random')" class = "random-button">Random</button>
+                <button onclick="changeColor('white')" class = "eraser-button">Eraser</button>
+                <button onclick="resetBoard()" class = "reset-button">Reset</button>
+            </div>
+            <div class="board"></div>
+            <div class = "changeSize-container">
+                <input type="text" id="set-size-text" placeholder="size of board" value = "16" onchange = "changeSize(this.value)"/>
+                <button class = "set-size">Set Size</button>
+                <div class="error">Input must be between 2 and 100</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "main.js"></script>
+</html>
